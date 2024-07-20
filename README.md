@@ -1,0 +1,1 @@
+# Norbit.Crm.Idiyatullin.StringSolution
