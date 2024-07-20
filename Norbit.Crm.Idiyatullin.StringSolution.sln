@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34221.43
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Norbit.Crm.Idiyatullin.StringLibrary", "Norbit.Crm.Idiyatullin.StringSolution\Norbit.Crm.Idiyatullin.StringLibrary.csproj", "{474F401B-A3A6-439B-8D03-24B701F570D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Norbit.Crm.Idiyatullin.StringDemo", "Norbit.Crm.Idiyatullin.StringDemo\Norbit.Crm.Idiyatullin.StringDemo.csproj", "{514EEFA0-B30D-4402-AB68-40313D8BDDED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{474F401B-A3A6-439B-8D03-24B701F570D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{474F401B-A3A6-439B-8D03-24B701F570D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{474F401B-A3A6-439B-8D03-24B701F570D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{474F401B-A3A6-439B-8D03-24B701F570D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{514EEFA0-B30D-4402-AB68-40313D8BDDED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{514EEFA0-B30D-4402-AB68-40313D8BDDED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{514EEFA0-B30D-4402-AB68-40313D8BDDED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{514EEFA0-B30D-4402-AB68-40313D8BDDED}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AC163F84-E30B-44CA-843B-2419EEE5D094}
+	EndGlobalSection
+EndGlobal
