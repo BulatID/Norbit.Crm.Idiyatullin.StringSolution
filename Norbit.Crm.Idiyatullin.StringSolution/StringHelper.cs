@@ -3,12 +3,12 @@
     public class StringHelper
     {
         /// <summary>
-        /// Конвертация из строки в целое число.
+        /// Преобразует строку в целое число.
         /// </summary>
-        /// <param name="input"></param>
-        /// <returns></returns>
-        /// <exception cref="ArgumentException"></exception>
-        public static int GetInput(string input)
+        /// <param name="input">Строка для преобразования.</param>
+        /// <returns>Целое число, полученное из строки.</returns>
+        /// <exception cref="ArgumentException">Если строка не представляет собой корректное целое число или если число отрицательное.</exception>
+        public static int ConvertToInt32(string input)
         {
             var isParsed = Int32.TryParse(input, out int inputValue);
 
