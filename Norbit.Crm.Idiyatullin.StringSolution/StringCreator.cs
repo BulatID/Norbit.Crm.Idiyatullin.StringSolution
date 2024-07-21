@@ -5,9 +5,9 @@ namespace Norbit.Crm.Idiyatullin.StringSolution
     public class StringCreator
     {
         /// <summary>
-        /// Создает строку с последовательностью чисел от 0 до <paramref name="size"/>.
+        /// Создает строку с последовательностью чисел от 1 до <paramref name="size"/>.
         /// </summary>
-        /// <param name="size">Размер последовательности (должно быть положительным числом).</param>
+        /// <param name="size">Размер последовательности.</param>
         /// <returns>Строка с последовательностью чисел, разделенных запятыми.</returns>
         /// <exception cref="ArgumentException">Если размер последовательности отрицательный или равен нулю.</exception>
         public static string CreateString(int size)
@@ -35,7 +35,7 @@ namespace Norbit.Crm.Idiyatullin.StringSolution
         /// <summary>
         /// Создает строку, представляющую квадрат со стороной <paramref name="size"/>, заполненный звездочками, кроме середины.
         /// </summary>
-        /// <param name="size">Размер стороны квадрата (должно быть положительным нечетным числом).</param>
+        /// <param name="size">Размер стороны квадрата.</param>
         /// <returns>Строка, представляющая квадрат со звездочками, кроме середины.</returns>
         /// <exception cref="ArgumentException">Если размер квадрата отрицательный или равен нулю, либо не является нечетным числом.</exception>
         public static string CreateStar(int size)
@@ -47,13 +47,13 @@ namespace Norbit.Crm.Idiyatullin.StringSolution
 
             var square = new StringBuilder();
 
-            var average = size / 2;
+            var center = size / 2;
 
             for (int i = 0; i <= size; i++)
             {
                 for (int j = 0; j <= size; j++)
                 {
-                    if (i == average && j == average)
+                    if (i == center && j == center)
                     {
                         square.Append(" ");
                     }

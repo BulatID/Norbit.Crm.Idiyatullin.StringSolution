@@ -8,7 +8,7 @@
         /// <param name="input">Строка для преобразования.</param>
         /// <returns>Целое число, полученное из строки.</returns>
         /// <exception cref="ArgumentException">Если строка не представляет собой корректное целое число или если число отрицательное.</exception>
-        public static int ConvertToInt32(string input)
+        public static int CheckAndConvertToInt32(string input)
         {
             var isParsed = Int32.TryParse(input, out int inputValue);
 

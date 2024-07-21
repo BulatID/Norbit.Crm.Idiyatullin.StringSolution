@@ -54,7 +54,7 @@ namespace Norbit.Crm.Idiyatullin.StringDemo
 
             var input = Console.ReadLine();
 
-            var count = StringHelper.ConvertToInt32(input!);
+            var count = StringHelper.CheckAndConvertToInt32(input!);
 
             string result = StringCreator.CreateString(count);
 
@@ -70,7 +70,7 @@ namespace Norbit.Crm.Idiyatullin.StringDemo
 
             var input = Console.ReadLine();
 
-            var count = StringHelper.ConvertToInt32(input!);
+            var count = StringHelper.CheckAndConvertToInt32(input!);
 
             var result = StringCreator.CreateStar(count);
 
