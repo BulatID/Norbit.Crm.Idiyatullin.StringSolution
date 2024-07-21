@@ -11,9 +11,9 @@ namespace Norbit.Crm.Idiyatullin.StringDemo
         }
 
         /// <summary>
-        /// Меню для выбора нужной операции
+        /// Меню для выбора нужной операции.
         /// </summary>
-        /// <exception cref="InvalidOperationException"></exception>
+        /// <exception cref="InvalidOperationException">Выбран неверный параметр.</exception>
         public static void Menu()
         {
             Console.WriteLine("Выберите необходимую задачу:");
@@ -25,13 +25,13 @@ namespace Norbit.Crm.Idiyatullin.StringDemo
             {
                 case "1":
 
-                    GetAndPrintSequence();
+                    GenerateSequence();
 
                     break;
 
                 case "2":
 
-                    GetAndPrintStars();
+                    GenerateStarSquare();
 
                     break;
 
@@ -46,35 +46,41 @@ namespace Norbit.Crm.Idiyatullin.StringDemo
         }
 
         /// <summary>
-        /// Запрашивает у пользователя число, генерирует последовательность чисел до этого числа и выводит ее.
+        /// Генерирует последовательность чисел до этого числа и выводит ее.
         /// </summary>
-        public static void GetAndPrintSequence()
+        public static void GenerateSequence()
         {
-            Console.WriteLine("Введите число для генерации последовательности:");
+            var input = GetIntInput("Введите число для генерации последовательности:");
 
-            var input = Console.ReadLine();
+            var result = StringCreator.CreateString(input);
 
-            var count = StringHelper.CheckAndConvertToInt32(input!);
-
-            string result = StringCreator.CreateString(count);
-
-            Console.WriteLine($"Последовательность до числа {count}: {result}");
+            Console.WriteLine($"Последовательность до числа {input}: {result}");
         }
 
         /// <summary>
-        /// Запрашивает у пользователя нечетное число, генерирует квадрат со звездочками, кроме центра и выводит его.
+        /// Генерирует квадрат со звездочками и выводит его.
         /// </summary>
-        public static void GetAndPrintStars()
+        public static void GenerateStarSquare()
         {
-            Console.WriteLine("Введите нечетное число для генерации звездочек:");
+            var input = GetIntInput("Введите нечетное число для генерации звездочек:");
+
+            var result = StringCreator.CreateStar(input);
+
+            Console.WriteLine($"Результат:\n{result}");
+        }
+
+        /// <summary>
+        /// Получение целого числа.
+        /// </summary>
+        /// <param name="text">Подсказка.</param>
+        /// <returns>Целое число.</returns>
+        public static int GetIntInput(string text)
+        {
+            Console.WriteLine(text);
 
             var input = Console.ReadLine();
 
-            var count = StringHelper.CheckAndConvertToInt32(input!);
-
-            var result = StringCreator.CreateStar(count);
-
-            Console.WriteLine($"Результат:\n{result}");
+            return StringHelper.CheckIsInteger(input!);
         }
     }
 }
