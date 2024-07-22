@@ -1,4 +1,6 @@
-﻿namespace Norbit.Crm.Idiyatullin.StringLibrary
+﻿using System.Drawing;
+
+namespace Norbit.Crm.Idiyatullin.StringLibrary
 {
     public class StringHelper
     {
@@ -10,12 +12,35 @@
         /// <exception cref="ArgumentException">Если строка не является целым числом.</exception>
         public static int CheckIsInteger(string input)
         {
-            if (!Int32.TryParse(input, out int inputValue))
-            {
-                throw new ArgumentException("Введен неверный параметр.", nameof(input));
-            }
+            return Int32.TryParse(input, out var inputValue) 
+                ? inputValue 
+                : throw new ArgumentException("Введен неверный параметр.", nameof(input));
+        }
 
-            return inputValue;
+        /// <summary>
+        /// Проверка числа на положительность.
+        /// </summary>
+        /// <param name="number">Число.</param>
+        /// <exception cref="ArgumentException">Не является положительным числом.</exception>
+        public static void CheckIsPositive(int number)
+        {
+            if (number <= 0)
+            {
+                throw new ArgumentException("Число должно быть положительным.", nameof(number));
+            }
+        }
+
+        /// <summary>
+        /// Проверка числа на нечетность.
+        /// </summary>
+        /// <param name="number">Число.</param>
+        /// <exception cref="ArgumentException">Не является нечетным.</exception>
+        public static void CheckIsOdd(int number)
+        {
+            if (number % 2 == 0)
+            {
+                throw new ArgumentException("Число должно быть нечетным.", nameof(number));
+            }
         }
     }
 }

@@ -52,7 +52,7 @@ namespace Norbit.Crm.Idiyatullin.StringDemo
         {
             var input = GetIntInput("Введите число для генерации последовательности:");
 
-            var result = StringCreator.CreateString(input);
+            var result = StringCreator.CreateStringSequence(input);
 
             Console.WriteLine($"Последовательность до числа {input}: {result}");
         }
@@ -64,7 +64,7 @@ namespace Norbit.Crm.Idiyatullin.StringDemo
         {
             var input = GetIntInput("Введите нечетное число для генерации звездочек:");
 
-            var result = StringCreator.CreateStar(input);
+            var result = StringCreator.CreateSquareStar(input);
 
             Console.WriteLine($"Результат:\n{result}");
         }
